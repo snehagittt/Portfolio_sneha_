@@ -1,0 +1,897 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+body
+{
+    color: #ededed; 
+    background: #081b29;
+    height: 94vh;
+    width: 94vw;
+    
+
+}
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo
+{
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover{
+    color: #0ef;
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: url("portfolio.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+
+}
+.home-content h3 span{
+    color: #0ef;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-content p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s* var(--i));
+    margin: 30px 15px 30px 0;
+}
+.home-sci a:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5px;
+}
+
+.box, .second-box {
+    flex: 1 1 calc(50% - 0.90rem); /* Adjust width to 50% with gap taken into account */
+    max-width: calc(50% - 0.90rem); /* Ensure max width respects gap */
+}
+
+.box span, .second-box span {
+    color: #0ef;
+    font-size: 20px;
+}
+
+    
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef
+    
+}
+.btn-box:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.about-img{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.about-text h2{
+    font-size: 60px;
+
+}
+.about-text h2 span{
+    color: #0ef;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+.services{
+    color:aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-titel{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-titel span { 
+    color: #0ef
+
+}
+
+.container{
+    padding: 90px;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+.services-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background o.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+               1px 1px 40px #0053b8f7
+}
+.services-list div i{
+   font-size: 50px;
+   margin-bottom: 30px;
+
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+.services-list div a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+
+}
+.read:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+
+.sub-title1 {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+}
+.sub-title1 span {
+    color: #0ef;
+}
+
+.bar {
+    font-size: 15px;
+}
+
+.technical-skills h2, .professional-skills h2 {
+    margin-top: 0;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    font-size: 25px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section {
+    flex: 1;
+    margin: 20px;
+}
+
+.skill {
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.progress-bar {
+    background-color: #000000;
+    border-radius: 50px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress-bar div {
+    background-color: #0ef;
+    height: 80%;
+    border-radius: 10px;
+    width: 0;
+}
+
+.progress-bar div span {
+    height: 20px;
+    width: 30px;
+    border-radius: 25%;
+    background: #081b29;
+    float: right;
+    margin-top: -0px;
+    margin-bottom: -1px;
+    margin-right: -35px;
+    color: #0ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: left;
+}
+
+.html {
+    animation: html 1s linear forwards;
+}
+
+.css {
+    animation: css 1s linear forwards;
+}
+
+.javascript {
+    animation: javascript 1s linear forwards;
+}
+
+.python {
+    animation: python 1s linear forwards;
+}
+
+.html span, .css span, .javascript span, .python span {
+    border: 1px solid #0ef;
+}
+
+@keyframes html {
+    100% {
+        width: 77%;
+    }
+}
+
+@keyframes css {
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes javascript {
+    100% {
+        width: 66%;
+    }
+}
+
+@keyframes python {
+    100% {
+        width: 81%;
+    }
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 140px;
+    height: 140px; /* Increased height to accommodate the skill names */
+    border-radius: 50%; /* Changed to 50% for a perfect circle */
+    background-color: #081b29;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.circle svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.background-circle {
+    stroke: #000;
+    stroke-width: 10;
+    fill: none;
+}
+
+.progress-circle {
+    stroke-width: 7;
+    stroke: #0ef;
+    fill: none;
+    stroke-dasharray: 314; /* Circumference of the circle */
+    stroke-dashoffset: calc(314 - (314 * var(--progress)) / 100);
+    transition: stroke-dashoffset 1s;
+    stroke-linecap: round;
+}
+
+.inner-circle {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Changed to 50% for a perfect circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.inner-circle span {
+    color: #0ef;
+    font-size: 1.5em; /* Adjust font size as needed */
+}
+
+.circle-label {
+    position: absolute;
+    bottom: -30px; /* Position skill names below the circle */
+    width: 110%;
+    text-align: center;
+    color: #fff; /* Change color as needed */
+    font-size: 19px;
+}
+
+.circle[data-progress="90"] {
+    --progress: 90;
+}
+
+.circle[data-progress="85"] {
+    --progress: 85;
+}
+
+.circle[data-progress="80"] {
+    --progress: 80;
+}
+
+.circle[data-progress="70"] {
+    --progress: 70;
+}
+.contact1{
+    position: relative;
+    min-height: 20px;
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #081b29;
+    margin-top: 40px;
+}
+.contact1 .content1{
+    max-width: 800px;
+    text-align: center;
+    font-size: 17px;
+}
+.contact1 .content1 h2{
+    font-size: 3.6rem;
+    color: #fff;
+    font-weight: 500;
+} 
+.contact1 .content1 h2 span{
+    color: #0ef;
+}
+.contact1 .content1 p{
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 27px;
+}
+.container1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-top: 26px;
+}
+.container1 .contactInfo{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+.container1 .contactInfo .box1{
+    position: relative;
+    padding: 26px 0;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+.container1 .contactInfo .box1 .icon{
+    position: relative;
+    min-width: 50px;
+    height: 50px;
+    background: repeating-conic-gradient(from 27.5deg, #0ef 0%, #0ef 10%, transparent 10%, transparent 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container1 .contactInfo .box1 .icon::before{
+    content:'';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from 117deg, #0ef 0%, #0ef 10%, transparent 10%, transparent 50%);
+}
+.container1 .contactInfo .box1 .icon::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #081b29;
+}
+.container1 .contactInfo .box1 .icon b{
+    position: absolute;
+    inset: 8px;
+    background: #0ef;
+    z-index: 2;
+}
+.container1 .contactInfo .box1 .icon i{
+    position: relative;
+    z-index: 1000;
+    color: #000;
+    font-size: 1.25em;
+}
+.container1 .contactInfo .box1 .text1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+}
+.container1 .contactInfo .box1 .text1 h3{
+    font-weight: 500;
+    color: #0ef;
+}
+.container1 .contactInfo .txt {
+    color: #fff;
+    margin-top: 50px;
+    font-weight: 500;
+    border-left: 50px solid #0ef;
+    padding-left: 10px;
+    line-height: 1em;
+}
+
+.container1 .contactInfo .sci {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+}
+
+.container1 .contactInfo .sci li {
+    list-style: none;
+}
+
+.container1 .contactInfo .sci li a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: 0.25s;
+}
+.container1 .contactInfo .sci li a:hover{
+    color: #0ef;
+    filter: drop-shadow(0 0 5px #0ef);
+}
+.container1 .contactForm{
+    position: relative;
+    display: flex;
+    width: 40%;
+    background: repeating-conic-gradient(from var(--a), #0ef 0%, #0ef 10%, transparent 10%, transparent 50%);
+    animation: animate 6s linear infinite;
+    padding: 60px;
+}
+.container1 .contactForm::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #0ef 0%, #0ef 10%, transparent 10%, transparent 50%);
+    animation: anumate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.container1 .contactForm::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 20px solid #081b29;
+    background: #002231;
+}
+.container1 .contactForm form {
+    position: relative;
+    z-index: 10;
+
+}
+
+.container1 .contactForm form h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.container1 .contactForm form .inputbox {
+    position: relative;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.container1 .contactForm form .inputbox input,
+.container1 .contactForm .inputbox textarea {
+   
+
+    width: 100% !important;
+    padding: 10px;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #0ef;
+    color: #fff;
+    outline: none;
+    resize: none;
+}
+
+.container1 .contactForm form .inputbox span {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    margin-bottom: 2px;
+    font-size: 1.1em;
+    transition: 0.5s;
+    color: #f0ebeb;
+}
+
+.container1 .contactForm .inputbox input:focus ~ span,
+.container1 .contactForm .inputbox input:valid ~ span,
+.container1 .contactForm .inputbox textarea:focus ~ span,
+.container1 .contactForm .inputbox textarea:valid ~ span {
+    top: -15px;
+    left: 0;
+    color: #0ef;
+    font-size: 12px;
+    transform: translateY(-24px);
+}
+
+.container1 .contactForm .inputbox input[type="submit"] {
+    background: #0ef;
+    color: #000;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.container1 .contactForm .inputbox input[type="submit"]:hover {
+    background: #081b29
+}
+
+
+
+@property --a{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate{
+    0%
+    {
+        --a:0deg
+    }
+    100%{
+        --a:360deg 
+    }
+}
+
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+        
+    
+
+@keyframes slideLeft{
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0% {
+        transform:translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0% {
+        transform:translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+/*responsive*/
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        margin-top: 10px;
+        
+    }
+
+    .home {
+        height: auto;
+        width: 50px;
+        padding: 40px 5% 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-content h3 {
+        font-size: 17px;
+    }
+
+    .home-content h1 {
+        font-size: 16px;
+    }
+
+    .home-content p {
+        font-size: 15px;
+        
+    }
+
+    .home-sci a {
+        width: 50px;
+        height: 50px;
+        font-size: 15px;
+        margin: 20px 10px 20px 0;
+    }
+
+    .box-container {
+        flex-direction: column;
+    }
+
+    .box, .second-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about-text p, .services {
+        font-size: 18px;
+    }
+
+    .sub-titel {
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
+
+    .container {
+        padding: 60px;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    .technical-skills h2, .professional-skills h2 {
+        font-size: 20px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .circle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circle-label {
+        bottom: -20px;
+        font-size: 16px;
+    }
+
+    .contact1 {
+        padding: 30px 20px;
+    }
+
+    .contact1 .content1 h2 {
+        font-size: 2.4rem;
+    }
+
+    .contact1 .content1 p {
+        font-size: 1rem;
+    }
+
+    .container1 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container1 .contactInfo {
+        width: 100%;
+    }
+
+    .container1 .contactForm {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .container1 .contactForm form h2 {
+        font-size: 1.8rem;
+    }
+}
